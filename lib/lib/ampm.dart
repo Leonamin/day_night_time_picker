@@ -5,8 +5,14 @@ import 'package:flutter/material.dart';
 class AmPm extends StatelessWidget {
   /// Default [TextStyle]
   final _style = const TextStyle(fontSize: 20);
+  final String amLabel;
+  final String pmLabel;
 
-  const AmPm({Key? key}) : super(key: key);
+  const AmPm({
+    Key? key,
+    this.amLabel = 'am',
+    this.pmLabel = 'pm',
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +50,7 @@ class AmPm extends StatelessWidget {
               child: Opacity(
                 opacity: !isAm ? unselectedOpacity : 1,
                 child: Text(
-                  'am',
+                  amLabel,
                   style: _style.copyWith(
                     color: isAm ? accentColor : unselectedColor,
                     fontWeight: isAm ? FontWeight.bold : null,
@@ -67,7 +73,7 @@ class AmPm extends StatelessWidget {
               child: Opacity(
                 opacity: isAm ? unselectedOpacity : 1,
                 child: Text(
-                  'pm',
+                  pmLabel,
                   style: _style.copyWith(
                     color: !isAm ? accentColor : unselectedColor,
                     fontWeight: !isAm ? FontWeight.bold : null,

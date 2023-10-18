@@ -238,7 +238,10 @@ class _DayNightTimePickerIosState extends State<DayNightTimePickerIos> {
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
-                      const AmPm(),
+                      AmPm(
+                        amLabel: timeState!.widget.amLabel!,
+                        pmLabel: timeState!.widget.pmLabel!,
+                      ),
                       Expanded(
                         child: Row(
                           textDirection: ltrMode,

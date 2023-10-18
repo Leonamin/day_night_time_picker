@@ -92,6 +92,12 @@ class TimeModelBinding extends StatefulWidget {
   /// Label for the `second` text.
   final String? secondLabel;
 
+  /// Label for the `am` text.
+  final String? amLabel;
+
+  /// Label for the `pm` text.
+  final String? pmLabel;
+
   /// Whether the widget is displayed as a popup or inline
   final bool isInlineWidget;
 
@@ -188,6 +194,8 @@ class TimeModelBinding extends StatefulWidget {
     this.hourLabel,
     this.minuteLabel,
     this.secondLabel,
+    this.amLabel,
+    this.pmLabel,
     this.isInlineWidget = false,
     this.focusMinutePicker = false,
     this.okStyle = const TextStyle(fontWeight: FontWeight.bold),
